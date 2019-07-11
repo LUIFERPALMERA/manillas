@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Manillas</string>
+    <string name="cuero">Cuero</string>
+    <string name="cuerda">Cuerda</string>
+    <string name="martillo">Martillo</string>
+    <string name="ancla">Ancla</string>
+    <string name="oro">Oro</string>
+    <string name="banio_oro">Baño de oro</string>
+    <string name="oro_rosado">Oro rosado</string>
+    <string name="plata">Plata</string>
+    <string name="niquel">Niquel</string>
+    <string name="dolares">Dolares</string>
+    <string name="pesos">Pesos</string>
+    <string-array name="dijeCuero">
+        <item>@string/martillo</item>
+        <item>@string/ancla</item>
+    </string-array>
+
+</resources>
