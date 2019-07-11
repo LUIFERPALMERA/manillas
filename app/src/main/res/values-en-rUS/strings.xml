@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bracelet</string>
+    <string name="ancla">" Anchor"</string>
+    <string name="banio_oro">Gold bath</string>
+    <string name="cuerda">Rope</string>
+    <string name="cuero">Leather</string>
+    <string name="dolares">Dollars</string>
+    <string name="martillo">Hammer</string>
+    <string name="niquel">Nickel</string>
+    <string name="oro">Gold</string>
+    <string name="oro_rosado">Pink gold</string>
+    <string name="pesos">Pesos</string>
+    <string name="plata">Silver</string>
+</resources>
