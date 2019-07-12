@@ -11,20 +11,44 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/textViewMateriales"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/materiales" />
+
         <Spinner
             android:id="@+id/spinnerMateriales"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textViewDijes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dijes" />
 
         <Spinner
             android:id="@+id/spinnerDijes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <TextView
+            android:id="@+id/textViewTipos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tipos" />
+
         <Spinner
             android:id="@+id/spinnerTipos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textViewMonedas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/monedas" />
 
         <Spinner
             android:id="@+id/spinnerMonedas"
@@ -36,26 +60,42 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="@string/cantidad_manillas"
             android:inputType="number" />
 
-        <Button
-            android:id="@+id/btn_calcular"
+        <LinearLayout
+            android:id="@+id/layaoutBotones"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="calcular"
-            android:text="@string/btnCalcular" />
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btnBorrar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="borrar"
-            android:text="@string/btn_borrar" />
+            <Button
+                android:id="@+id/btnBorrar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="borrar"
+                android:text="@string/btn_borrar" />
 
-        <TextView
-            android:id="@+id/textResultado"
+            <Button
+                android:id="@+id/btn_calcular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="calcular"
+                android:text="@string/btnCalcular" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textResultado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

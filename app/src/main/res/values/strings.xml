@@ -34,4 +34,10 @@
     <string name="banio_oro">Baños de oro</string>
     <string name="btnCalcular">Calcular</string>
     <string name="btn_borrar">Resetear</string>
+    <string name="materiales">Materiales:</string>
+    <string name="dijes">Dijes:</string>
+    <string name="tipos">Tipos:</string>
+    <string name="monedas">Monedas:</string>
+    <string name="cantidad_manillas">Cantidad de manillas</string>
+    <string name="resultado_manillas">El valor total es:</string>
 </resources>

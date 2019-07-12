@@ -16,4 +16,10 @@
     <string name="error_vacio">The quantity is required</string>
     <string name="btnCalcular">Calculate</string>
     <string name="btn_borrar">Reset</string>
+    <string name="materiales">Materials:</string>
+    <string name="monedas">Currencies:</string>
+    <string name="dijes">Charms:</string>
+    <string name="cantidad_manillas">Amount of bracelets</string>
+    <string name="tipos">Types:</string>
+    <string name="resultado_manillas">The total value is:</string>
 </resources>
