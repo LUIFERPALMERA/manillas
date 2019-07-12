@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
     public void calcular(View v){
 
         int DOLAR = 3200,valorManilla, valor=0, cant, opcMaterial, opcDije, opcTipo, opcMoneda;
+
         if(validar()){
             cant = Integer.parseInt(cantidad.getText().toString());
             opcMaterial = comboMateriales.getSelectedItemPosition();
@@ -90,10 +91,10 @@ public class MainActivity extends AppCompatActivity {
                 valor = 50;
             }
 
-            valorManilla = opcMoneda == 1 ? (valor*DOLAR*cant) : (valor*cant);
+            valorManilla = opcMoneda == 0 ? (valor*DOLAR*cant) : (valor*cant);
             //debug
             //Log.d("Prueba", "Valor del resultado" + res);
-            resultado.setText(getResources().getString(R.string.resultado_manillas)+valorManilla);
+            resultado.setText(getResources().getString(R.string.resultado_manillas)+" "+valorManilla+" "+comboMonedas.getSelectedItem().toString());
         }
 
 
@@ -115,7 +116,16 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-
+    public void borrar(View v){
+        cantidad.setText("");
+        cantidad.setError(null);
+        comboMateriales.setSelection(0);
+        comboDijes.setSelection(0);
+        comboTipos.setSelection(0);
+        comboMonedas.setSelection(0);
+        cantidad.requestFocus();
+        resultado.setText("");
+    }
 
 
 }
