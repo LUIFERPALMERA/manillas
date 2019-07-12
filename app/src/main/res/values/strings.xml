@@ -11,9 +11,10 @@
     <string name="niquel">Niquel</string>
     <string name="dolares">Dolares</string>
     <string name="pesos">Pesos</string>
-    <string-array name="dijeCuero">
-        <item>@string/martillo</item>
-        <item>@string/ancla</item>
+
+    <string-array name="moneda">
+        <item>@string/pesos</item>
+        <item>@string/dolares</item>
     </string-array>
 
 </resources>
