@@ -3,22 +3,30 @@ package com.example.manillas;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    String materiales[];
+    String dijes[];
+    String tipos[];
+    String monedas[];
 
+    TextView resultado;
+    EditText cantidad;
+
+    Spinner comboMateriales, comboDijes, comboTipos, comboMonedas;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String materiales[];
-        String dijes[];
-        String tipos[];
-        String monedas[];
-
-        Spinner comboMateriales, comboDijes, comboTipos, comboMonedas;
+        //Captura de los objetos utilizados
+        cantidad = findViewById(R.id.textCantidad);
+        resultado = findViewById(R.id.textResultado);
 
         // Traemos información de los arrays
         materiales = getResources().getStringArray(R.array.materiales);
@@ -46,4 +54,6 @@ public class MainActivity extends AppCompatActivity {
         comboMonedas = findViewById(R.id.spinnerMonedas);
         comboMonedas.setAdapter(adapterMonedas);
     }
+
+
 }

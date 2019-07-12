@@ -28,4 +28,10 @@
         <item>@string/pesos</item>
         <item>@string/dolares</item>
     </string-array>
+
+    <string name="error_vacio">La cantidad es obligatoria</string>
+    <string name="error_negativo">La cantidad debe ser mayor que cero</string>
+    <string name="banio_oro">Baños de oro</string>
+    <string name="btnCalcular">Calcular</string>
+    <string name="btn_borrar">Resetear</string>
 </resources>

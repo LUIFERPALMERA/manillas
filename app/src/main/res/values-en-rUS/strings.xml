@@ -12,4 +12,8 @@
     <string name="oro_rosado">Pink gold</string>
     <string name="pesos">Pesos</string>
     <string name="plata">Silver</string>
+    <string name="error_negativo">The quantity must be greater than zero</string>
+    <string name="error_vacio">The quantity is required</string>
+    <string name="btnCalcular">Calculate</string>
+    <string name="btn_borrar">Reset</string>
 </resources>
