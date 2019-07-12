@@ -55,6 +55,67 @@ public class MainActivity extends AppCompatActivity {
         comboMonedas.setAdapter(adapterMonedas);
     }
 
+    public void calcular(View v){
+
+        int DOLAR = 3200,valorManilla, valor=0, cant, opcMaterial, opcDije, opcTipo, opcMoneda;
+        if(validar()){
+            cant = Integer.parseInt(cantidad.getText().toString());
+            opcMaterial = comboMateriales.getSelectedItemPosition();
+            opcDije = comboDijes.getSelectedItemPosition();
+            opcTipo = comboTipos.getSelectedItemPosition();
+            opcMoneda = comboMonedas.getSelectedItemPosition();
+
+            if((opcMaterial == 0 && opcDije == 0 && (opcTipo == 0 || opcTipo == 1))
+                    || (opcMaterial == 0 && opcDije == 1 && opcTipo == 2)
+            ){
+                valor = 100;
+            }else if((opcMaterial == 0 && opcDije == 0 && opcTipo == 2)
+                    || (opcMaterial == 1 && opcDije == 1 && opcTipo == 3)
+            ){
+                valor = 80;
+            }else if((opcMaterial == 0 && opcDije == 0 && opcTipo == 3)
+                    || (opcMaterial == 1 && opcDije == 0 && opcTipo == 2)
+            ){
+                valor = 70;
+            }else if(opcMaterial == 0 && opcDije == 1 && (opcTipo == 0 || opcTipo == 1)){
+                valor = 120;
+            }else if((opcMaterial == 0 && opcDije == 1 && opcTipo == 3)
+                    || (opcMaterial == 1 && opcDije == 0 && (opcTipo == 0 || opcTipo == 1))
+                    || (opcMaterial == 1 && opcDije == 1 && opcTipo == 2)
+            ){
+                valor = 90;
+            }else if(opcMaterial == 1 && opcDije == 1 && (opcTipo == 0 || opcTipo == 1)){
+                valor = 110;
+            }else{
+                valor = 50;
+            }
+
+            valorManilla = opcMoneda == 1 ? (valor*DOLAR*cant) : (valor*cant);
+            //debug
+            //Log.d("Prueba", "Valor del resultado" + res);
+            resultado.setText(getResources().getString(R.string.resultado_manillas)+valorManilla);
+        }
+
+
+    }
+
+    public boolean validar(){
+        if(cantidad.getText().toString().isEmpty()){
+            cantidad.setError(getResources().getString(R.string.error_vacio));
+            cantidad.requestFocus();
+            return false;
+        }
+        int cant = Integer.parseInt(cantidad.getText().toString());
+        if(cant <= 0){
+            cantidad.setError(getResources().getString(R.string.error_negativo));
+            cantidad.requestFocus();
+            return false;
+        }
+
+        return true;
+    }
+
+
 
 
 }
